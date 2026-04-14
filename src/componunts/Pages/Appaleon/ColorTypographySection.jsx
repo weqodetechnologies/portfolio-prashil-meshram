@@ -33,7 +33,7 @@ export default function ColorTypographySection() {
       <div className="max-w-5xl mx-auto">
         
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-10">
+        <h2 className="text-4xl text-center mb-10 font-extrabold font-heading">
           Color and Typography
         </h2>
 
@@ -44,8 +44,8 @@ export default function ColorTypographySection() {
               key={index}
               className={`${color.bg} ${color.text} rounded-2xl p-6 h-58 flex flex-col justify-between`}
             >
-              <p className=" text-2xl">{color.hex}</p>
-              <h3 className="text-3xl font-semibold">{color.name}</h3>
+              <p className=" text-2xl font-bold font-body">{color.hex}</p>
+              <h3 className="text-3xl font-bold font-body">{color.name}</h3>
             </div>
           ))}
         </div>
@@ -67,7 +67,7 @@ export default function ColorTypographySection() {
 
             <p className="text-xl font-medium">Body</p>
             <p className="text-sm text-gray-300 mt-2">
-              Size: 22,18,28,20,32,16,14
+              Size: 22, 18, 28, 20, 32, 16, 14
             </p>
             <p className="text-sm text-gray-300">Weight: Medium, Regular</p>
           </div>

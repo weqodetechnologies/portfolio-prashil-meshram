@@ -25,7 +25,7 @@ export default function ColorTypographySection() {
       <div className="max-w-4xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl text-center mb-12 font-extrabold font-heading">
           Color and Typography
         </h2>
 
@@ -44,8 +44,8 @@ export default function ColorTypographySection() {
                 ${color.full ? "sm:col-span-2 h-[180px]" : ""}
               `}
             >
-              <p className="text-lg font-medium">{color.hex}</p>
-              <h3 className="text-2xl font-semibold">{color.name}</h3>
+              <p className="text-lg font-medium font-body">{color.hex}</p>
+              <h3 className="text-2xl font-bold font-body">{color.name}</h3>
             </div>
           ))}
 

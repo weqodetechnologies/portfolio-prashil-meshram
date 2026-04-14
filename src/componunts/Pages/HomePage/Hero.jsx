@@ -25,14 +25,15 @@ export default function Hero() {
         >
           {/* LEFT */}
           <div className="min-w-0 order-1 lg:order-none pb-4 sm:pb-8 lg:pb-20">
-            <p className="text-[22px] sm:text-[34px] font-semibold text-black/60">
+            <p className="text-[22px] sm:text-[34px] font-bold font-heading text-black/60">
               Hey, I’m a
             </p>
 
             <h1
               className="
-                mt-2 font-extrabold leading-[0.95] text-[#1b1b1b]
+                mt-2  leading-[0.95] text-[#1b1b1b]
                 text-[44px] sm:text-[70px] lg:text-[82px]
+                font-extrabold font-heading
               "
             >
               UI/UX
@@ -64,13 +65,13 @@ export default function Hero() {
           {/* RIGHT */}
           <div className="min-w-0 order-3 lg:order-none pb-10 lg:pb-10">
             <div className="text-center lg:text-left">
-              <p className="text-[18px] sm:text-[26px] font-extrabold text-[#1b1b1b]">
+              <p className="text-[18px] sm:text-[26px] font-bold font-heading text-[#1b1b1b]">
                 “Design is how it works,
                 <br />
                 not how it looks.”
               </p>
 
-              <p className="mt-3 text-[13px] sm:text-[18px] text-black/50">
+              <p className="mt-3 text-[13px] sm:text-[18px] font-regular font-body text-black/50">
                 Transform ideas into intuitive designs
               </p>
             </div>
@@ -207,7 +208,7 @@ function MusicCard() {
         mt-3 text-[12px] text-black/60
         h-[200px] overflow-y-auto pr-2
         [scrollbar-width:none] [-ms-overflow-style:none]
-       [&::-webkit-scrollbar]:hidden
+       [&::-webkit-scrollbar]:hidden font-medium font-body
        "
           >
             {tracks.map((t, idx) => (

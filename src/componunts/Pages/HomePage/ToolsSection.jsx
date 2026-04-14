@@ -23,7 +23,7 @@ export default function ToolsSection() {
   return (
     <section className="bg-black text-white py-16 px-4">
       {/* Title */}
-      <h2 className="text-center text-white text-[28px] sm:text-[36px] font-semibold mb-16">
+      <h2 className="text-center text-white text-[28px] sm:text-[36px] font-semibold font-heading mb-16">
         Tools I Play with Everyday
       </h2>
 
@@ -42,7 +42,9 @@ export default function ToolsSection() {
               alt={tool.name}
               className="w-16 h-16 object-contain"
             />
-            <span className="text-sm sm:text-base">{tool.name}</span>
+            <span className="text-sm sm:text-base font-regular font-body">
+              {tool.name}
+            </span>
           </div>
         ))}
       </div>

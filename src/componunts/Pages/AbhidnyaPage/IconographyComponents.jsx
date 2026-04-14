@@ -34,7 +34,7 @@ export default function IconographyComponents() {
       <div className="max-w-[1100px] mx-auto">
         
         {/* Heading */}
-        <h2 className="text-[42px] font-bold text-center mb-12">
+        <h2 className="text-[42px] text-center mb-12 font-extrabold font-heading">
           Iconography
         </h2>
 
@@ -50,7 +50,7 @@ export default function IconographyComponents() {
 </div>
 
         {/* Components Heading */}
-        <h2 className="text-[42px] font-bold text-center mb-10">
+        <h2 className="text-[42px] text-center mb-10 font-extrabold font-heading">
           Components
         </h2>
 
@@ -66,7 +66,7 @@ export default function IconographyComponents() {
     </section>
     <section className="bg-black text-white py-20 px-4">
       <div className="max-w-[1100px] mx-auto">
-       <h2 className="text-[42px] font-bold text-center mb-10">
+       <h2 className="text-[42px] text-center mb-10 font-extrabold font-heading">
          Low Fidelity Wireframes
         </h2>
 
@@ -82,7 +82,7 @@ export default function IconographyComponents() {
     </section>
     <section className="bg-black text-white py-20 px-4">
       <div className="max-w-[1100px] mx-auto">
-       <h2 className="text-[42px] font-bold text-center mb-10">
+       <h2 className="text-[42px] text-center mb-10 font-extrabold font-heading">
          High Fidelity design
         </h2>
 
@@ -104,12 +104,12 @@ export default function IconographyComponents() {
         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] rounded-3xl p-10 md:p-14 shadow-lg">
           
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl mb-6 font-extrabold font-heading">
             Takeaway
           </h2>
 
           {/* Paragraph */}
-          <p className="text-gray-300 text-lg leading-relaxed max-w-6xl">
+          <p className="text-gray-300 text-lg leading-relaxed max-w-6xl font-medium font-body">
             This project takeaway is that a well-structured and professional
             website can strongly improve trust and clarity for an import-export
             business. By presenting Abhidnya Exim Pvt. Ltd.’s product range,
@@ -123,7 +123,7 @@ export default function IconographyComponents() {
           <div className="flex items-center justify-center gap-4 mt-10">
             <ArrowDownRight className="w-6 h-6 text-gray-300" />
             
-            <p className="text-xl md:text-2xl font-semibold text-center">
+            <p className="text-xl md:text-2xl text-center font-bold font-heading">
               Don’t Forget to visit the Website
             </p>
 
@@ -135,7 +135,7 @@ export default function IconographyComponents() {
           <div className="flex justify-center mt-8">
              <button
   onClick={() => window.open("https://www.abhidnyaexim.com/products", "_blank")}
-  className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition"
+  className="bg-white text-black px-6 py-3 rounded-full  hover:bg-gray-200 transition font-bold font-body"
 >
   Visit Website
 </button>

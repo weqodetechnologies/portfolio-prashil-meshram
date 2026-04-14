@@ -8,7 +8,7 @@ export default function UserPersona() {
     <section className="bg-black text-white px-5 sm:px-10 lg:px-20 py-16">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-2xl sm:text-3xl font-semibold mb-12">
+        <h2 className="text-center text-2xl sm:text-3xl font-extrabold font-heading mb-12">
           User Persona
         </h2>
 
@@ -23,12 +23,12 @@ export default function UserPersona() {
                 className="w-35 h-35 rounded-lg object-cover"
               />
               <div>
-                <h3 className="font-semibold">Ananya Sharma, 33</h3>
-                <p className="text-white text-sm">CEO</p>
+                <h3 className="font-bold font-body">Ananya Sharma, 33</h3>
+                <p className="text-white text-sm font-bold font-body">CEO</p>
               </div>
             </div>
 
-            <p className="mt-4 text-sm text-white leading-relaxed">
+            <p className="mt-4 text-sm text-white leading-relaxed font-medium font-body">
               “I need a team that understands my vision and <br /> delivers without
               making it complicated.”
             </p>
@@ -43,12 +43,12 @@ export default function UserPersona() {
                 className="w-35 h-35 rounded-lg object-cover"
               />
               <div>
-                <h3 className="font-semibold">Rajesh Mehta, 27</h3>
-                <p className="text-white text-sm">Director</p>
+                <h3 className="font-bold font-body">Rajesh Mehta, 27</h3>
+                <p className="text-white text-sm font-bold font-body">Director</p>
               </div>
             </div>
 
-            <p className="mt-4 text-sm text-white leading-relaxed">
+            <p className="mt-4 text-sm text-white leading-relaxed font-medium font-body">
               “I don’t want technical jargon. I want a partner <br />who understands
               my business and delivers on time.”
             </p>
@@ -63,9 +63,9 @@ export default function UserPersona() {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Icon name="Goals" className="w-5 h-5" />
-                <h4 className="font-semibold">Goals and Motivations</h4>
+                <h4 className="font-semibold font-heading">Goals and Motivations</h4>
               </div>
-              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7">
+              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7 font-medium font-body">
                 <li>
                   Find a trusted IT consulting firm for long-term collaboration</li>
                 <li>Build a professional website / software solution for her business</li>
@@ -80,7 +80,7 @@ export default function UserPersona() {
                 <Icon name="Needs" className="w-5 h-5" />
                 <h4 className="font-semibold ">Needs</h4>
               </div>
-              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7">
+              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7 font-medium font-body">
                 <li> A website that explains services in a clear and non-technical way</li>
                 <li>Strong portfolio + case studies that show real outcomes</li>
                 <li>Quick access to pricing clarity / project scope</li>
@@ -92,9 +92,9 @@ export default function UserPersona() {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Icon name="Challenges" className="w-5 h-5" />
-                <h4 className="font-semibold">Challenges</h4>
+                <h4 className=" font-semibold font-heading">Challenges</h4>
               </div>
-              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7">
+              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7 font-medium font-body">
                 <li> Difficulty trusting agencies due to overpromising</li>
                 <li>Fear of poor post-launch support</li>
                 <li>Limited time to review proposals and technical details</li>
@@ -109,9 +109,9 @@ export default function UserPersona() {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Icon name="Goals" className="w-5 h-5" />
-                <h4 className="font-semibold">Goals and Motivations</h4>
+                <h4 className="font-semibold font-heading">Goals and Motivations</h4>
               </div>
-              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7">
+              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7 font-medium font-body">
                 <li>Find a reliable IT partner to build and scale digital products</li>
                 <li>Improve operational efficiency using technology</li>
                 <li>Get clear cost estimates and realistic timelines</li>
@@ -123,9 +123,9 @@ export default function UserPersona() {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Icon name="Needs" className="w-5 h-5" />
-                <h4 className="font-semibold">Needs</h4>
+                <h4 className="font-semibold font-heading">Needs</h4>
               </div>
-              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7">
+              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7 font-medium font-body">
                 <li> A website that clearly explains services in simple language</li>
                 <li>Real case studies showing business impact</li>
                 <li>Easy ways to contact or book a consultation</li>
@@ -137,9 +137,9 @@ export default function UserPersona() {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Icon name="Challenges" className="w-5 h-5" />
-                <h4 className="font-semibold">Challenges</h4>
+                <h4 className="font-semibold font-heading">Challenges</h4>
               </div>
-              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7">
+              <ul className="text-sm text-white space-y-2 pt-2 list-disc pl-7 font-medium font-body">
                 <li>Hard to judge which IT firm is genuinely experienced</li>
                 <li>Past experiences with missed deadlines and unclear communication</li>
                 <li>Limited time to compare multiple vendors</li>

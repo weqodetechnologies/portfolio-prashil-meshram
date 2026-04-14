@@ -21,7 +21,7 @@ export default function FeaturedProjects() {
     <section className="bg-[#0b0b0b] py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-white text-[28px] sm:text-[36px] font-semibold mb-16">
+        <h2 className="text-center text-white text-[28px] sm:text-[36px] mb-16 font-semibold font-heading">
           My Featured Projects
         </h2>
 
@@ -47,24 +47,34 @@ export default function FeaturedProjects() {
               {/* Content */}
               <div className="flex items-center justify-between mt-4">
                 <div>
-                  <h3 className="text-[16px] font-semibold text-black">
+                  <h3 className="text-[16px] font-extrabold font-heading">
                     {project.title}
                   </h3>
-                  <p className="text-[13px] text-black/60">
+                  <p className="text-[13px] text-black/60 font-regular font-body">
                     {project.subtitle}
                   </p>
                 </div>
 
                 {/* Arrow Button */}
-                <button
-                  className="
-                    w-10 h-10 flex items-center justify-center
-                    rounded-full border border-black/20
-                    transition group-hover:bg-black group-hover:text-white
-                  "
-                >
-                  <ArrowUpRight size={16} />
-                </button>
+<button
+  className="
+    group
+    w-10 h-10
+    flex items-center justify-center
+    rounded-full border border-black/20
+    transition
+    hover:bg-black hover:text-white
+  "
+>
+  <span
+    className="
+      transition-transform duration-300
+      group-hover:rotate-45
+    "
+  >
+    <ArrowUpRight size={16} />
+  </span>
+</button>
               </div>
             </div>
           ))}
@@ -77,7 +87,7 @@ export default function FeaturedProjects() {
               rounded-2xl
               bg-gradient-to-br from-white/10 to-white/5
               border border-white/10
-              text-white/70 text-lg font-medium
+              text-white/70 text-lg font-medium font-bold font-body
             "
           >
             Click For More Case Studies

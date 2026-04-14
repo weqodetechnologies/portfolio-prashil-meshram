@@ -2,9 +2,11 @@ import React from "react";
 import AboutHero1 from "../../../assets/homepage/AboutHero1.png";
 import AboutHeroo from "../../../assets/homepage/AboutHeroo.png";
 import AboutHerooo from "../../../assets/homepage/AboutHerooo.png";
+import { useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 export default function AboutHero() {
+  const navigate = useNavigate();
   const photos = [
     {
       src: AboutHero1,
@@ -41,11 +43,11 @@ export default function AboutHero() {
               HELLO
             </p>
 
-            <h1 className="mt-2 text-[34px] font-extrabold tracking-tight text-white sm:text-[46px] lg:text-[54px]">
+            <h1 className="mt-2 text-[34px] tracking-tight font-bold font-heading text-white sm:text-[46px] lg:text-[54px]">
               I’M PRASHIL
             </h1>
 
-            <p className="mt-4 max-w-[520px] text-[13px] leading-6 text-white/70 sm:text-[12px] sm:leading-7">
+            <p className="mt-4 max-w-[520px] text-[13px] leading-6 font-regular text-white/70 sm:text-[12px] font-regular font-body sm:leading-7">
               A Passionated and Detail Oriented UI/UX Designer with Strong
               Knowledge of UI Fundamentals, Turning Ideas into a Visual Stunning
               ideas. I Have Hands on experience in Wireframing and Protofyping.
@@ -53,27 +55,28 @@ export default function AboutHero() {
 
             {/* CTA */}
             <div className="mt-7">
-              <button
-                type="button"
-                className="
-                  group inline-flex items-center gap-3
-                  rounded-full border border-white/25 bg-white/5
-                  px-5 py-3 text-[13px] font-semibold text-white
-                  backdrop-blur
-                  transition hover:border-white/40 hover:bg-white/10
-                "
-              >
-                More About Me
-                <span
-                  className="
-                    grid h-8 w-8 place-items-center rounded-full
-                    border border-white/20 bg-white/10
-                    transition group-hover:bg-white/15
-                  "
-                >
-                  <ArrowUpRight className="h-4 w-4" />
-                </span>
-              </button>
+             <button
+  type="button"
+  onClick={() => navigate("/about")}
+  className="
+    group inline-flex items-center gap-3
+    rounded-full border border-white/25 bg-white/5
+    px-5 py-3 text-[13px] font-semibold text-white
+    backdrop-blur
+    transition hover:border-white/40 hover:bg-white/10 font-medium font-body
+  "
+>
+  More About Me
+  <span
+    className="
+      grid h-8 w-8 place-items-center rounded-full
+      border border-white/20 bg-white/10
+      transition group-hover:bg-white/15
+    "
+  >
+    <ArrowUpRight className="h-4 w-4" />
+  </span>
+</button>
             </div>
           </div>
 
@@ -86,6 +89,9 @@ export default function AboutHero() {
                 <div className="relative w-[190px] h-[220px] group">
                   {photos.map((p, i) => (
                     <Polaroid
+
+
+                    
                       key={p.date}
                       src={p.src}
                       date={p.date}
@@ -108,7 +114,7 @@ export default function AboutHero() {
               backdrop-blur
             "
           >
-            <div className="grid gap-6 text-center sm:grid-cols-3 sm:gap-2">
+            <div className="grid gap-6 text-center sm:grid-cols-3 sm:gap-2 font-medium font-body">
               <Stat value="6+" label="Month Experience" />
               <Stat value="8+" label="Completed Projects" />
               <Stat value="100%" label="Happy Clients" />
@@ -159,6 +165,7 @@ function Polaroid({ src, date, index }) {
       </div>
 
       <div className="absolute bottom-1.5 left-0 right-0 text-center">
+        
         <span className="text-[12px] text-black/80 italic">{date}</span>
       </div>
     </div>
