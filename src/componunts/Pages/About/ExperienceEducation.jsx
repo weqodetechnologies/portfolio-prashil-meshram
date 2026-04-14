@@ -33,7 +33,7 @@ export default function ExperienceEducation() {
     <section className="bg-black px-6 md:px-16 lg:px-24 py-20">
       <div className="max-w-6xl mx-auto">
         {/* EXPERIENCE */}
-        <h2 className="text-white text-4xl md:text-4xl font-extrabold text-center mb-14">
+        <h2 className="text-white text-4xl md:text-4xl font-bold font-heading text-center mb-14">
           My Experience
         </h2>
 
@@ -58,30 +58,30 @@ export default function ExperienceEducation() {
                   </div>
 
                   <div>
-                    <h3 className="text-white text-xl md:text-2xl font-bold">
+                    <h3 className="text-white text-xl md:text-2xl font-bold font-heading">
                       {item.company}
                     </h3>
-                    <p className="text-gray-400 text-sm md:text-base mt-1">
+                    <p className="text-gray-400 text-sm md:text-base mt-1 font-regular font-body">
                       {item.duration}
                     </p>
                   </div>
                 </div>
 
                 {/* RIGHT */}
-                <p className="text-white text-base sm:text-lg md:text-xl font-bold sm:shrink-0 ml-[72px] sm:ml-0">
+                <p className="text-white text-base sm:text-lg md:text-xl sm:shrink-0 ml-[72px] sm:ml-0  font-bold font-heading">
                   {item.role}
                 </p>
               </div>
 
               {index < experiences.length - 1 && (
-                <div className="w-full h-px bg-white/30 mt-8" />
+                <div className="w-full h-px bg-white/30 mt-8 font-regular font-body" />
               )}
             </div>
           ))}
         </div>
 
         {/* EDUCATION */}
-        <h2 className="text-white text-4xl md:text-4xl font-extrabold text-center mt-20 mb-14">
+        <h2 className="text-white text-4xl md:text-4xl text-center mt-20 mb-14 font-bold font-heading">
           My Education
         </h2>
 

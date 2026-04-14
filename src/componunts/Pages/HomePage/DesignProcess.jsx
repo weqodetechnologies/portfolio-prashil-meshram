@@ -50,7 +50,7 @@ export default function DesignProcess() {
       <div className="max-w-6xl mx-auto ">
         
         {/* Heading */}
-        <h2 className="text-center text-white text-[28px] sm:text-[36px] font-semibold mb-20">
+        <h2 className="text-center text-white text-[28px] sm:text-[36px] font-semibold font-heading mb-20">
           My Design Process
           
         </h2>
@@ -80,12 +80,12 @@ export default function DesignProcess() {
              </div>
 
               {/* Title */}
-              <h3 className="text-[24px] font-semibold mb-2 ">
+              <h3 className="text-[24px] font-semibold mb-2 font-semibold font-heading ">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-[16px] leading-6 ">
+              <p className="text-[16px] leading-6 font-regular font-body">
                 {item.desc}
               </p>
             </div>

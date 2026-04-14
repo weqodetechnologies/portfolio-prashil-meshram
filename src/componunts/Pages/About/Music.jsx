@@ -27,7 +27,7 @@ export default function Music() {
             alt="Headphones"
             className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
           />
-          <h1 className="text-white text-xl sm:text-4xl font-bold leading-tight">
+          <h1 className="text-white text-xl sm:text-4xl font-bold leading-tight font-bold font-heading">
             Music Artists when I Always Hear Them
           </h1>
         </div>
@@ -47,7 +47,7 @@ export default function Music() {
                 />
               </div>
 
-              <p className="text-white text-base sm:text-lg font-semibold text-center py-4 px-2">
+              <p className="text-white text-base sm:text-lg text-center py-4 px-2 font-bold font-body">
                 {artist.name}
               </p>
             </div>

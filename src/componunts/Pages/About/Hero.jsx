@@ -7,18 +7,18 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-22">
         {/* LEFT — Text Content */}
         <div className="flex-1">
-          <h2 className="text-white text-[30px] sm:text-[34px] font-extrabold mt-10 mb-6">
+          <h2 className="text-white text-[30px] sm:text-[34px] mt-10 mb-6 font-bold font-heading">
             About Me
           </h2>
 
-          <p className="text-white sm:text-[20px] leading-relaxed mb-5">
+          <p className="text-white sm:text-[20px] leading-relaxed mb-5 font-medium font-body">
             I'm a passionate UI/UX Designer who loves turning complex ideas into
             simple, intuitive, and visually engaging digital experiences. I
             believe great design is not just about how things look, but how
             smoothly they work for real users.
           </p>
 
-          <p className="text-white sm:text-[20px] leading-relaxed">
+          <p className="text-white sm:text-[20px] leading-relaxed font-medium font-body">
             With a strong foundation in user research, wireframing, prototyping,
             and visual design, I focus on creating user-centered solutions that
             align business goals with user needs. I enjoy understanding user

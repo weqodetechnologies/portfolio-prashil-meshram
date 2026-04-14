@@ -23,7 +23,7 @@ export default function BentoGallery() {
             className="w-14 h-14 object-contain"
           />
 
-          <h2 className="text-white text-2xl sm:text-4xl font-bold">
+          <h2 className="text-white text-2xl sm:text-4xl font-bold font-heading">
             My Bento Gallery That I’ve Captured
           </h2>
         </div>

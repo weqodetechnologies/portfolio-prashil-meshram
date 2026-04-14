@@ -35,13 +35,17 @@ export default function Navbar() {
     <header className="w-full bg-white mb-[4px] sticky top-0 z-50">
       <nav className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* LOGO */}
-        <button type="button" onClick={() => handleNavClick("/home")} className="shrink-0">
+        <button
+          type="button"
+          onClick={() => handleNavClick("/home")}
+          className="shrink-0"
+        >
           <img src={logo} alt="Logo" className="h-10 w-auto sm:h-9" />
         </button>
 
         {/* LINKS */}
         <div className="flex flex-1 justify-center">
-          <ul className="flex items-center gap-5 text-[12px] font-medium text-neutral-500 sm:gap-8 sm:text-sm">
+          <ul className="flex items-center gap-5 text-[12px] font-medium font-body text-neutral-500 sm:gap-8 sm:text-sm">
             {navLinks.map((l) => (
               <li key={l.href}>
                 <button
@@ -49,10 +53,10 @@ export default function Navbar() {
                   onClick={() => handleNavClick(l.href)}
                   className={`group relative px-1 py-1 transition-all duration-200 hover:text-black
                   ${
-                   tempActive === l.href
-                   ? "-translate-y-0.5 text-black"
-                   : "hover:-translate-y-0.5"
-                   }`}
+                    tempActive === l.href
+                      ? "-translate-y-0.5 text-black"
+                      : "hover:-translate-y-0.5"
+                  }`}
                 >
                   {l.label}
 
@@ -74,12 +78,16 @@ export default function Navbar() {
         {/* RESUME */}
         <div className="shrink-0">
           <a
-  href="/resume.pdf"
-  className="inline-flex h-9 items-center justify-center rounded-full bg-black px-3 text-white sm:h-10 sm:px-4"
->
-  <Icon name="nots" className="h-5 w-5 text-white" />
-  <span className="hidden sm:inline ml-2 text-sm font-semibold">Resume</span>
-</a>
+            href="https://drive.google.com/file/d/15xIkkzeGBKzDYgPTgHy3foPl2sTqhIyv/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-9 items-center justify-center rounded-full bg-black px-3 text-white sm:h-10 sm:px-4"
+          >
+            <Icon name="nots" className="h-5 w-5 text-white" />
+            <span className="hidden sm:inline ml-2 text-sm font-medium font-body">
+              Resume
+            </span>
+          </a>
         </div>
       </nav>
     </header>

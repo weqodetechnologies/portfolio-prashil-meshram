@@ -26,7 +26,7 @@ export default function FevBooks() {
             className="w-14 h-14 object-contain"
           />
 
-          <h2 className="text-white text-2xl sm:text-4xl font-bold leading-tight">
+          <h2 className="text-white text-2xl sm:text-4xl leading-tight font-bold font-heading">
             Books I’ve read to stay inspired
           </h2>
         </div>

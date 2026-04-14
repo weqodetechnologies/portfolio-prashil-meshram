@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex items-start justify-between gap-6">
           {/* LEFT */}
           <div className="min-w-0 mt-8 sm:mt-4 lg:mt-0">
-            <h2 className="text-[34px] font-extrabold leading-[1.05] text-black sm:text-[44px] lg:text-[56px]">
+            <h2 className="text-[34px] font-extrabold font-heading leading-[1.05] text-black sm:text-[44px] lg:text-[56px]">
               Let’s Make something
               <br />
               Creative
@@ -25,13 +25,13 @@ export default function Footer() {
             {/* Contact */}
             <div className="mt-7 text-neutral-600 text-[12px] sm:text-[10px] lg:text-[30px]">
               {/* MOBILE LAYOUT */}
-              <div className="flex flex-col gap-1 lg:hidden">
+              <div className="flex flex-col gap-1 lg:hidden font-regular font-body">
                 <span>+91 9370327361</span>
                 <span>prashilmeshram8923@gmail.com</span>
               </div>
 
               {/* LAPTOP LAYOUT */}
-              <div className="hidden lg:flex items-center gap-3">
+              <div className="hidden lg:flex items-center gap-3 font-regular font-body">
                 <span className="whitespace-nowrap">+91 9370327361</span>
 
                 <Icon name="dot" className="h-2.5 w-2.5 text-neutral-400" />
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           {/* RIGHT (always beside heading, even on mobile) */}
-          <div className="shrink-0 flex flex-col gap-3 items-end text-right pt-2 mt-6 lg:mt-0">
+          <div className="shrink-0 flex flex-col gap-3 items-end text-right pt-2 mt-6 lg:mt-0 font-regular font-body">
             <SocialLink
               label="LinkedIn"
               url="https://www.linkedin.com/in/prashil-meshram"
