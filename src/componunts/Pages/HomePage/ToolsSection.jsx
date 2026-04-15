@@ -14,7 +14,7 @@ const tools = [
   { name: "Canva", logo: canva },
   { name: "Affinity", logo: affinity },
   { name: "Chatgpt", logo: chatgpt },
-  { name: "ProtoPie", logo: protopie },
+  { name: "Protopie", logo: protopie },
   { name: "Perplexity", logo: perplexity },
   { name: "Motiff", logo: motiff },
   { name: "Banani", logo: banani },
