@@ -1,19 +1,19 @@
 import React from "react";
 
-import figma from "../../../assets/homepage/figma.png";
-import canva from "../../../assets/homepage/canva.png";
-import affinity from "../../../assets/homepage/affinity.png";
-import chatgpt from "../../../assets/homepage/chatgpt.png";
-import protopie from "../../../assets/homepage/protopie.png";
-import perplexity from "../../../assets/homepage/perplexity.png";
-import motiff from "../../../assets/homepage/motiff.png";
-import banani from "../../../assets/homepage/banani.png";
+import figma from "/src/assets/homepage/Figma.png";
+import canva from "/src/assets/homepage/Canva.png";
+import affinity from "/src/assets/homepage/Affinity.png";
+import chatgpt from "/src/assets/homepage/Chatgpt.png";
+import protopie from "/src/assets/homepage/Protopie.png";
+import perplexity from "/src/assets/homepage/Perplexity.png";
+import motiff from "/src/assets/homepage/Motiff.png";
+import banani from "/src/assets/homepage/Banani.png";
 
 const tools = [
   { name: "Figma", logo: figma },
   { name: "Canva", logo: canva },
   { name: "Affinity", logo: affinity },
-  { name: "Chatgpt", logo: chatgpt },
+  { name: "Chatgpt", logo: chatgpt },                 
   { name: "Protopie", logo: protopie },
   { name: "Perplexity", logo: perplexity },
   { name: "Motiff", logo: motiff },
