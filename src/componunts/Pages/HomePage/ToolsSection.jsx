@@ -4,7 +4,7 @@ import figma from "/src/assets/homepage/Figma.png";
 import canva from "/src/assets/homepage/Canva.png";
 import affinity from "/src/assets/homepage/Affinity.png";
 import chatgpt from "/src/assets/homepage/Chatgpt.png";
-import protopie from "/src/assets/homepage/Protopie.png";
+import protopie from "/src/assets/homepage/protopie.png";
 import perplexity from "/src/assets/homepage/Perplexity.png";
 import motiff from "/src/assets/homepage/Motiff.png";
 import banani from "/src/assets/homepage/Banani.png";
@@ -14,7 +14,7 @@ const tools = [
   { name: "Canva", logo: canva },
   { name: "Affinity", logo: affinity },
   { name: "Chatgpt", logo: chatgpt },                 
-  { name: "Protopie", logo: protopie },
+  { name: "protopie", logo: protopie },
   { name: "Perplexity", logo: perplexity },
   { name: "Motiff", logo: motiff },
   { name: "Banani", logo: banani },
