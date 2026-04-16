@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import heroImg from "../../../assets/homepage/HeroImage.png";
 import albumImg from "../../../assets/homepage/HeroImage1.png";
+import Img3 from "../../../assets/homepage/song3.png";
+import Img6 from "../../../assets/homepage/song6.png";
 import Icon from "../../ui/Icon/icon";
+import place from "../../../assets/audio/A Place for My Head.mp3";
+import crawling from "../../../assets/audio/Crawling.mp3";
+import figure from "../../../assets/audio/Figure- Linkin Park.mp3";
+import papercut from "../../../assets/audio/Linkin Park-Papercut.mp3";
+import runaway from "../../../assets/audio/Linkin Park-Runaway.mp3";
+import away from "../../../assets/audio/As You Fade Away.mp3";
+
+import { useRef } from "react";
+import { Pause, Play } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="w-full  sm:pb-16 lg:pb-20 bg-white">
+    <section className="w-full  bg-white">
       {/* OUTER rounded container */}
-      <div
-        className="
-          w-full border border-[#f3f3f3]
-          rounded-b-[36px] sm:rounded-b-[70px] lg:rounded-b-[90px]
-          px-4 sm:px-10 lg:px-24
-          pt-8 sm:pt-1 pb-0
-          overflow-hidden 
-        "
-      >
+     <div
+  className="
+    mx-auto max-w-7xl
+    border border-[#f3f3f3]
+    rounded-b-[36px] sm:rounded-b-[70px] lg:rounded-b-[90px]
+    px-4 sm:px-6
+    pt-8 sm:pt-1 pb-0
+    overflow-hidden
+  "
+>
         <div
           className="
             grid gap-8 sm:gap-10 lg:gap-12
@@ -32,7 +44,7 @@ export default function Hero() {
             <h1
               className="
                 mt-2  leading-[0.95] text-[#1b1b1b]
-                text-[44px] sm:text-[70px] lg:text-[82px]
+                text-[40px] sm:text-[60px] lg:text-[78px]
                 font-extrabold font-heading
               "
             >
@@ -63,12 +75,11 @@ export default function Hero() {
           </div>
 
           {/* RIGHT */}
-          <div className="min-w-0 order-3 lg:order-none pb-10 lg:pb-10">
+          <div className="min-w-0 order-3 lg:order-none pb-10 lg:pb-10 lg:-translate-x-6">
             <div className="text-center lg:text-left">
-              <p className="text-[18px] sm:text-[26px] font-bold font-heading text-[#1b1b1b]">
-                “Design is how it works,
-                <br />
-                not how it looks.”
+             <p className="text-[18px] sm:text-[26px] font-bold font-heading  text-[#1b1b1b] max-w-[320px]">
+             “Design is how it works,  <br /> 
+              not how it looks.”
               </p>
 
               <p className="mt-3 text-[13px] sm:text-[18px] font-regular font-body text-black/50">
@@ -76,7 +87,7 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="mt-6 lg:mt-8">
+            <div className="mt-4 lg:mt-4">
               <MusicCard />
             </div>
           </div>
@@ -115,41 +126,69 @@ function ScrollCircle() {
 }
 
 function MusicCard() {
-  const tracks = [
-    "Papercut - Linkin Park",
-    "One Step Closer - Linkin Park",
-    "Crawling - Linkin Park",
-    "Runaway - Linkin Park",
-    "In the End - Linkin Park",
+  const [currentTrack, setCurrentTrack] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-    "Lying From You - Linkin Park",
-    "Easier to Run - Linkin Park",
-    "Faint - Linkin Park",
-    "Figure.09 - Linkin Park",
-    "From the Inside - Linkin Park",
+ const tracks = [
+  { title: "A Place for My Head", file: place, img: albumImg },
+  { title: "Crawling", file: crawling, img: albumImg },
+  { title: "Figure- Linkin Park", file: figure, img: Img3 },
+  { title: "Linkin Park-Papercut", file: papercut, img: albumImg },
+  { title: "Linkin Park-Runaway", file: runaway, img: albumImg },
+  { title: "As You Fade Away", file: away, img: Img6 },
+];
 
-    "Numb - Linkin Park",
-    "Somewhere I Belong - Linkin Park",
-    "Breaking the Habit - Linkin Park",
-    "What I've Done - Linkin Park",
-    "New Divide - Linkin Park",
+  const audioRef = useRef(null);
+  const togglePlay = () => {
+    if (!audioRef.current) return;
 
-    "Rest of Me - Neffex",
-    "Unstoppable - Neffex",
-    "Watch Me - Neffex",
-    "As You Fade Away - Neffex",
-    "Best of Me - Neffex",
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
 
-    "Torn Apart - Neffex",
-  ];
+    setIsPlaying(!isPlaying);
+  };
+
+  const nextTrack = () => {
+    const nextTrack = (currentTrack + 1) % tracks.length;
+    setCurrentTrack(nextTrack);
+    setIsPlaying(true);
+  };
+
+  const prevTrack = () => {
+    const prevTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+    setCurrentTrack(prevTrack);
+    setIsPlaying(true);
+  };
+
+  // const autoplayNext = () => {
+  //   const nextTrack = (currentTrack + 1) % tracks.length;
+  //   setCurrentTrack(nextTrack);
+  //   setIsPlaying(true);
+  // }
+
+  useEffect(() => {
+    if (audioRef.current && isPlaying) {
+      audioRef.current.play();
+    }
+  }, [currentTrack]);
 
   return (
-    <div className="w-full max-w-[600px] mx-auto lg:mx-0 rounded-2xl bg-white p-4 shadow-[0_22px_45px_rgba(0,0,0,0.14)]">
+    <div className="w-full max-w-[660px] mx-auto lg:mx-0 rounded-2xl bg-white p-4 
+border border-black/15
+shadow-[0_22px_45px_rgba(0,0,0,0.14)]">
+      <audio
+        ref={audioRef}
+        src={tracks[currentTrack].file}
+        onEnded={nextTrack}
+      />
       <div className="flex flex-col sm:flex-row gap-4">
         {/* LEFT */}
         <div className="sm:w-[155px] shrink-0">
           <img
-            src={albumImg}
+           src={tracks[currentTrack].img}
             alt="album"
             className="h-[190px] sm:h-[170px] w-full rounded-xl object-cover"
           />
@@ -169,6 +208,7 @@ function MusicCard() {
           <div className="mt-3 flex items-center gap-3 justify-center sm:justify-start">
             <button
               type="button"
+              onClick={prevTrack}
               className="grid h-10 w-10 place-items-center rounded-full border bg-black cursor-pointer"
             >
               <Icon name="LeftArrow" classname="h-5 w-5 text-white" />
@@ -176,13 +216,19 @@ function MusicCard() {
 
             <button
               type="button"
+              onClick={togglePlay}
               className="grid h-10 w-10 place-items-center rounded-full border bg-black cursor-pointer"
             >
-              <Icon name="middel" classname="h-5 w-5 text-white" />
+              {isPlaying ? (
+                <Pause className="h-5 w-5 text-white" />
+              ) : (
+                <Play className="h-5 w-5 text-white" />
+              )}
             </button>
 
             <button
               type="button"
+              onClick={nextTrack}
               className="grid h-10 w-10 place-items-center rounded-full border bg-black cursor-pointer"
             >
               <Icon name="RightArrow" classname="h-5 w-5 text-white" />
@@ -211,16 +257,31 @@ function MusicCard() {
        [&::-webkit-scrollbar]:hidden font-medium font-body
        "
           >
-            {tracks.map((t, idx) => (
-              <li key={t} className="py-2">
-                <div className="flex gap-2">
-                  <span className="w-5 text-black/45">{idx + 1}.</span>
-                  <span className="min-w-0 truncate">{t}</span>
-                </div>
-                {idx !== tracks.length - 1 && (
-                  <div className="mt-2 h-px w-full bg-black/10" />
-                )}
-              </li>
+            {tracks.map((track, idx) => (
+              <li
+  key={idx}
+  onClick={() => {
+    setCurrentTrack(idx);
+    setIsPlaying(true);
+  }}
+  className={`py-2 cursor-pointer transition ${
+    idx === currentTrack ? "text-black font-semibold" : "text-black/60"
+  }`}
+>
+  <div className="flex items-center gap-3">
+    <span className="w-4 text-right text-black/40">
+      {idx + 1}.
+    </span>
+
+    <span className="truncate">
+      {track.title}
+    </span>
+  </div>
+
+  {idx !== tracks.length - 1 && (
+    <div className="mt-2 h-[1px] w-full bg-black/10" />
+  )}
+</li>
             ))}
           </ol>
         </div>

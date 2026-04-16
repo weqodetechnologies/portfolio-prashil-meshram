@@ -1,21 +1,25 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import AboutHero2 from "../../../assets/homepage/AboutHero2.png";
 import AboutHero3 from "../../../assets/homepage/AboutHero3.png";
 
 export default function FeaturedProjects() {
+  const navigate = useNavigate();
   const projects = [
-    {
-      title: "Appaleon Consulting",
-      subtitle: "IT Firm Website",
-      image: AboutHero2,
-    },
-    {
-      title: "Abhidnya Exim Pvt...",
-      subtitle: "Import Export Website",
-      image: AboutHero3,
-    },
-  ];
+  {
+    title: "Appaleon Consulting",
+    subtitle: "IT Firm Website",
+    image: AboutHero2,
+    path: "/appaleon",
+  },
+  {
+    title: "Abhidnya Exim Pvt...",
+    subtitle: "Import Export Website",
+    image: AboutHero3,
+    path: "/abhidnya",
+  },
+];
 
   return (
     <section className="bg-[#0b0b0b] py-16 px-4">
@@ -47,7 +51,7 @@ export default function FeaturedProjects() {
               {/* Content */}
               <div className="flex items-center justify-between mt-4">
                 <div>
-                  <h3 className="text-[16px] font-extrabold font-heading">
+                  <h3 className="text-[16px] text-black font-extrabold font-heading">
                     {project.title}
                   </h3>
                   <p className="text-[13px] text-black/60 font-regular font-body">
@@ -56,15 +60,16 @@ export default function FeaturedProjects() {
                 </div>
 
                 {/* Arrow Button */}
-<button
-  className="
-    group
-    w-10 h-10
-    flex items-center justify-center
-    rounded-full border border-black/20
-    transition
-    hover:bg-black hover:text-white
-  "
+           <button
+           onClick={() => navigate(project.path)}
+           className="
+           group
+           w-10 h-10
+           flex items-center justify-center
+           rounded-full border border-black/20
+           transition
+           hover:bg-black hover:text-white
+           "
 >
   <span
     className="
@@ -87,7 +92,7 @@ export default function FeaturedProjects() {
               rounded-2xl
               bg-gradient-to-br from-white/10 to-white/5
               border border-white/10
-              text-white/70 text-lg font-medium font-bold font-body
+              text-white/70 text-lg font-bold font-body
             "
           >
             Click For More Case Studies
