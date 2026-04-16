@@ -39,7 +39,7 @@ export default function AboutHero() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           {/* LEFT TEXT */}
           <div className="min-w-0">
-            <p className="text-[40px] font-extrabold uppercase tracking-[0.14em] text-white/18 sm:text-[46px] lg:text-[56px]">
+            <p className="text-[40px]  uppercase font-extrabold  font-heading tracking-[0.14em] text-white/18 sm:text-[46px] lg:text-[56px]">
               HELLO
             </p>
 
@@ -55,28 +55,28 @@ export default function AboutHero() {
 
             {/* CTA */}
             <div className="mt-7">
-             <button
-  type="button"
-  onClick={() => navigate("/about")}
-  className="
+              <button
+                type="button"
+                onClick={() => navigate("/about")}
+                className="
     group inline-flex items-center gap-3
     rounded-full border border-white/25 bg-white/5
     px-5 py-3 text-[13px] font-semibold text-white
     backdrop-blur
     transition hover:border-white/40 hover:bg-white/10 font-medium font-body
   "
->
-  More About Me
-  <span
-    className="
+              >
+                More About Me
+                <span
+                  className="
       grid h-8 w-8 place-items-center rounded-full
       border border-white/20 bg-white/10
       transition group-hover:bg-white/15
     "
-  >
-    <ArrowUpRight className="h-4 w-4" />
-  </span>
-</button>
+                >
+                  <ArrowUpRight className="h-4 w-4" />
+                </span>
+              </button>
             </div>
           </div>
 
@@ -89,9 +89,6 @@ export default function AboutHero() {
                 <div className="relative w-[190px] h-[220px] group">
                   {photos.map((p, i) => (
                     <Polaroid
-
-
-                    
                       key={p.date}
                       src={p.src}
                       date={p.date}
@@ -144,12 +141,12 @@ function Polaroid({ src, date, index }) {
     <div
       className={`
         absolute top-0 left-0
-        w-[90px] sm:w-[150px] lg:w-[200px] 
+        w-[90px] sm:w-[150px] lg:w-[180px] 
         bg-white
         p-2 pb-6
         shadow-[0_18px_45px_rgba(0,0,0,0.55)]
 
-        transition-all duration-500 ease-in-out
+        transition-all duration-500 
 
         ${index === 0 ? "z-[3]" : ""}
         ${index === 1 ? "z-[2] group-hover:-translate-x-40 group-hover:-rotate-6" : ""}
@@ -160,12 +157,18 @@ function Polaroid({ src, date, index }) {
         <img
           src={src}
           alt={date}
-          className="h-[120px] w-full sm:h-[160px] lg:h-[190px]"
+          className={`
+    h-[120px] w-full sm:h-[160px] lg:h-[190px]
+    object-contain
+
+    ${index === 0 ? "rotate-[4deg]" : ""}
+    ${index === 1 ? "rotate-[8deg]" : ""}
+    ${index === 2 ? "rotate-[-6deg]" : ""}
+  `}
         />
       </div>
 
       <div className="absolute bottom-1.5 left-0 right-0 text-center">
-        
         <span className="text-[12px] text-black/80 italic">{date}</span>
       </div>
     </div>
