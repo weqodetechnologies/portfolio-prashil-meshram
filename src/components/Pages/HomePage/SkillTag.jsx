@@ -23,7 +23,17 @@ const skills = {
 
 const SkillTag = ({ text }) => {
   return (
-    <span className="px-8 py-4 bg-[#0f0f0f] border border-white/10 text-gray-300 rounded-full text-[20px] shadow-md hover:bg-[#2a2a2a] transition font-medium font-body">
+    <span
+      className="
+        w-[48%] sm:w-auto
+        text-center
+        px-4 sm:px-8 py-3 sm:py-4
+        bg-[#0f0f0f] border border-white/10 text-gray-300 
+        rounded-full text-[14px] sm:text-[20px]
+        shadow-md hover:bg-[#2a2a2a] transition 
+        font-medium font-body
+      "
+    >
       {text}
     </span>
   );
@@ -42,7 +52,7 @@ export default function SkillsSection() {
           <h3 className="text-lg font-semibold font-heading mb-6 text-[28px] text-gray-300">
             Design Skills
           </h3>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-3 sm:gap-4">
             {skills.design.map((skill, index) => (
               <SkillTag key={index} text={skill} />
             ))}
@@ -54,7 +64,7 @@ export default function SkillsSection() {
           <h3 className="text-lg font-semibold font-heading mb-6 text-[28px] text-gray-300">
             Soft Skills
           </h3>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-3 sm:gap-4">
             {skills.soft.map((skill, index) => (
               <SkillTag key={index} text={skill} />
             ))}

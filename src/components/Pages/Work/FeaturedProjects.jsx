@@ -89,18 +89,25 @@ export default function FeaturedProjects() {
           ))}
 
           {/* Coming Soon Card */}
-          <div
-            className="
-              flex items-center justify-center
-              h-[300px]
-              rounded-2xl
-              bg-gradient-to-br from-white/10 to-white/5
-              border border-white/10
-              text-white/70 text-lg font-bold font-body
-            "
-          >
-            Click For More Case Studies
-          </div>
+                  <a
+  href="https://www.behance.net/prashilmeshram1/moodboards"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <div
+    className="
+      flex items-center justify-center
+      h-[300px]
+      rounded-2xl
+      bg-gradient-to-br from-white/10 to-white/5
+      border border-white/10
+      text-white/70 text-lg font-bold font-body
+      cursor-pointer hover:scale-[1.02] transition
+    "
+  >
+    Click For More Case Studies
+  </div>
+</a>
         </div>
       </div>
     </section>

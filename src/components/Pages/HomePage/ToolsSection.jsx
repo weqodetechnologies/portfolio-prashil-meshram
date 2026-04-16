@@ -28,7 +28,7 @@ export default function ToolsSection() {
       </h2>
 
       {/* Grid */}
-      <div className="flex flex-wrap justify-center gap-14 max-w-6xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-6 sm:gap-14 max-w-6xl mx-auto">
         {tools.map((tool, index) => (
           <div
             key={index}
