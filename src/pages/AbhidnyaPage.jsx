@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../componunts/Layouts/Navbar";
-import Footer from "../componunts/Layouts/Footer";
-import Hero from "../componunts/Pages/AbhidnyaPage/Hero";
-import UserPersona from "../componunts/Pages/AbhidnyaPage/UserPersona";
-import ColorTypographySection from "../componunts/Pages/AbhidnyaPage/ColorTypographySection";
-import IconographyComponents from "../componunts/Pages/AbhidnyaPage/IconographyComponents";
+import Navbar from "../components/Layouts/Navbar";
+import Footer from "../components/Layouts/Footer";
+import Hero from "../components/Pages/AbhidnyaPage/Hero";
+import UserPersona from "../components/Pages/AbhidnyaPage/UserPersona";
+import ColorTypographySection from "../components/Pages/AbhidnyaPage/ColorTypographySection";
+import IconographyComponents from "../components/Pages/AbhidnyaPage/IconographyComponents";
 
 
 

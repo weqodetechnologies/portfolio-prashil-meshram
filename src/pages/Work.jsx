@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../componunts/Layouts/Navbar";
-import Footer from "../componunts/Layouts/Footer";
-import FeaturedProjects from "../componunts/Pages/Work/FeaturedProjects";
+import Navbar from "../components/Layouts/Navbar";
+import Footer from "../components/Layouts/Footer";
+import FeaturedProjects from "../components/Pages/Work/FeaturedProjects";
 
 function Work() {
   return (

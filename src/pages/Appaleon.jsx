@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../componunts/Layouts/Navbar";
-import Footer from "../componunts/Layouts/Footer";
-import Hero from "../componunts/Pages/Appaleon/Hero";
-import UserPersona from "../componunts/Pages/Appaleon/UserPersona";
-import ColorTypographySection from "../componunts/Pages/Appaleon/ColorTypographySection";
-import IconographyComponents from "../componunts/Pages/Appaleon/IconographyComponents";
+import Navbar from "../components/Layouts/Navbar";
+import Footer from "../components/Layouts/Footer";
+import Hero from "../components/Pages/Appaleon/Hero";
+import UserPersona from "../components/Pages/Appaleon/UserPersona";
+import ColorTypographySection from "../components/Pages/Appaleon/ColorTypographySection";
+import IconographyComponents from "../components/Pages/Appaleon/IconographyComponents";
 
 
 function Appaleon() {

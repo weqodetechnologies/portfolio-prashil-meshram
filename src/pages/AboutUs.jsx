@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../componunts/Layouts/Navbar";
-import Footer from "../componunts/Layouts/Footer";
-import Hero from "../componunts/Pages/About/Hero";
-import ExperienceEducation from "../componunts/Pages/About/ExperienceEducation";
-import Music from "../componunts/Pages/About/Music";
-import FevBooks from "../componunts/Pages/About/FevBooks";
-import BentoGallery from "../componunts/Pages/About/BentoGallery";
+import Navbar from "../components/Layouts/Navbar";
+import Footer from "../components/Layouts/Footer";
+import Hero from "../components/Pages/About/Hero";
+import ExperienceEducation from "../components/Pages/About/ExperienceEducation";
+import Music from "../components/Pages/About/Music";
+import FevBooks from "../components/Pages/About/FevBooks";
+import BentoGallery from "../components/Pages/About/BentoGallery";
 
 
 function AboutUs() {
