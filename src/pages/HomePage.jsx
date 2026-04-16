@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../componunts/Layouts/Navbar";
-import Hero from "../componunts/Pages/HomePage/Hero";
-import Footer from "../componunts/Layouts/Footer";
-import AboutHero from "../componunts/Pages/HomePage/AboutHero";
-import FeaturedProjects from "../componunts/Pages/HomePage/FeaturedProjects";
-import DesignProcess from "../componunts/Pages/HomePage/DesignProcess";
-import ToolsSection from "../componunts/Pages/HomePage/ToolsSection";
-import SkillTag from "../componunts/Pages/HomePage/SkillTag";
+import Navbar from "../components/Layouts/Navbar";
+import Hero from "../components/Pages/HomePage/Hero";
+import Footer from "../components/Layouts/Footer";
+import AboutHero from "../components/Pages/HomePage/AboutHero";
+import FeaturedProjects from "../components/Pages/HomePage/FeaturedProjects";
+import DesignProcess from "../components/Pages/HomePage/DesignProcess";
+import ToolsSection from "../components/Pages/HomePage/ToolsSection";
+import SkillTag from "../components/Pages/HomePage/SkillTag";
 
 function HomePage() {
   return (

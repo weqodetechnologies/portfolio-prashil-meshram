@@ -1,7 +1,7 @@
 import logo from "../../assets/logo.png";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Icon from "../../componunts/ui/Icon/icon";
+import Icon from "../ui/Icon/icon";
 import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
