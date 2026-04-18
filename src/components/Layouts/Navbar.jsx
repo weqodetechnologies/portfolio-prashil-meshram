@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Icon from "../ui/Icon/icon";
 import { useLocation } from "react-router-dom";
+import ResumePDF from "../../assets/Prashil-UX-Resume.pdf";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -82,19 +83,19 @@ export default function Navbar() {
         </div>
 
         {/* RESUME */}
-        <div className="shrink-0">
-          <a
-            href="https://drive.google.com/file/d/15xIkkzeGBKzDYgPTgHy3foPl2sTqhIyv/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-9 items-center justify-center rounded-full bg-black px-3 text-white sm:h-10 sm:px-4"
-          >
-            <Icon name="nots" className="h-5 w-5 text-white" />
-            <span className="hidden sm:inline ml-2 text-sm font-medium font-body">
-              Resume
-            </span>
-          </a>
-        </div>
+       <div className="shrink-0">
+  <a
+    href={ResumePDF}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex h-9 items-center justify-center rounded-full bg-black px-3 text-white sm:h-10 sm:px-4"
+  >
+    <Icon name="nots" className="h-5 w-5 text-white" />
+    <span className="hidden sm:inline ml-2 text-sm font-medium font-body">
+      Resume
+    </span>
+  </a>
+</div>
       </nav>
     </header>
   );
